@@ -1,0 +1,61 @@
+(function(){
+
+var ZC = Ext.ns('Zenoss.component');
+
+
+function render_link(ob) {
+    if (ob && ob.uid) {
+        return Zenoss.render.link(ob.uid);
+    } else {
+        return ob;
+    }
+}
+
+ZC.snmpExtendPanel = Ext.extend(ZC.ComponentGridPanel, {
+    constructor: function(config) {
+        config = Ext.applyIf(config||{}, {
+            componentType: 'snmpExtend',
+            fields: [
+                {name: 'uid'},
+                {name: 'name'},
+                {name: 'severity'},
+                {name: 'status'},
+                {name: 'hasMonitor'},
+                {name: 'monitor'},
+                {name: 'commandLine'},
+                {name: 'outputLine'},
+            ],
+            columns: [{
+                id: 'severity',
+                dataIndex: 'severity',
+                header: _t('Events'),
+                renderer: Zenoss.render.severity,
+                width: 50
+            },{
+                id: 'commandLine',
+                dataIndex: 'commandLine',
+                header: _t('Command'),
+                width: 200,
+                sortable: true,
+            },{
+                id: 'outputLine',
+                dataIndex: 'outputLine',
+                header: _t('Output'),
+                width: 400,
+                sortable: true,
+            },{
+                id: 'name',
+                dataIndex: 'name',
+                header: _t('Name'),
+                width: 100,
+                sortable: true
+            }]
+        });
+        ZC.snmpExtendPanel.superclass.constructor.call(this, config);
+    }
+});
+
+Ext.reg('snmpExtendPanel', ZC.snmpExtendPanel);
+ZC.registerName('snmpExtend', _t('DLS_SNMP'), _t('DLS_SNMPs'));
+
+})();
