@@ -95,7 +95,10 @@ Change History
 Screenshots
 ===========
 |snmp_extend_output1|
+SNMP Command component with single commands with multi-line output
+
 |snmp_extend_output2|
+SNMP Command component with multiple command lines each with a single line of output
 
 
 .. External References Below. Nothing Below This Line Should Be Rendered
