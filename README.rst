@@ -35,8 +35,7 @@ Components
 ==========
 
 The ZenPack has the following relevant files:
-    * __init__.py adds an snmpCommand relationship to the standard code for OperatingSystem relations.  It 
-also ensures that realtions are rebuilt when this ZenPack is installed / removed.
+    * __init__.py adds an snmpCommand relationship to the standard code for OperatingSystem relations.  It also ensures that relations are rebuilt when this ZenPack is installed / removed.
     * snmpExtend.py defines the new component type and defines the relation with the standard os object.
 
 
@@ -44,16 +43,12 @@ Requirements & Dependencies
 ===========================
 
     * Zenoss Versions Supported: 3.x and 4.2
-    * External Dependencies: The net-snmp agent must be installed and configured on target systems,
-including extend stanzas.  For example:
+    * External Dependencies: The net-snmp agent must be installed and configured on target systems, including extend stanzas.  For example:
         * extend testcmd_bad_exit /usr/local/zenoss/zenoss/local/testcmd.sh
         * Note that an snmp agent must be recycled if an extend command is added / changed
     * ZenPack Dependencies: None
-    * Installation Notes: A full zenoss stop / zenoss start should be executed when the ZenPack is first installed
-and a browser refresh performed.
-    * Configuration:  The modeler plugin snmpCommandMap is introduced by the ZenPack.  It should be 
-configured for relevant devices and the devices remodeled.  For example, to model a single device with the
-new modeler use:
+    * Installation Notes: A full zenoss stop / zenoss start should be executed when the ZenPack is first installed and a browser refresh performed.
+    * Configuration:  The modeler plugin snmpCommandMap is introduced by the ZenPack.  It should be configured for relevant devices and the devices remodeled.  For example, to model a single device with the new modeler use:
         * zenmodeler run -v 10 -d zenoss.class.example.org --collect snmpCommandMap
         * Refresh the browser window
 
@@ -86,7 +81,6 @@ developer mode::
    zenpack --link --install <package>
    zenoss stop
    zenoss start
-   zenhub restart
 
 Configuration
 =============
