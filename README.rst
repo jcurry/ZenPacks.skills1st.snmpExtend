@@ -104,6 +104,9 @@ SNMP Command component with single commands with multi-line output
 |snmp_extend_output2|
 SNMP Command component with multiple command lines each with a single line of output
 
+|snmp_extend_report|
+Report on SNMP Commands - search filter operational and Export All button exports selected lines
+
 
 .. External References Below. Nothing Below This Line Should Be Rendered
 
@@ -114,6 +117,7 @@ SNMP Command component with multiple command lines each with a single line of ou
 
 .. |snmp_extend_output1| image:: http://github.com/jcurry/ZenPacks.skills1st.snmpExtend/raw/master/screenshots/snmp_extend_output1_screenshot.jpg
 .. |snmp_extend_output2| image:: http://github.com/jcurry/ZenPacks.skills1st.snmpExtend/raw/master/screenshots/snmp_extend_output2_screenshot.jpg
+.. |snmp_extend_report| image:: http://github.com/jcurry/ZenPacks.skills1st.snmpExtend/raw/master/screenshots/snmp_extend_report.jpg
 
                                                                         
 
