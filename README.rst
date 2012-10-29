@@ -111,8 +111,8 @@ Report on SNMP Commands - search filter operational and Export All button export
 .. External References Below. Nothing Below This Line Should Be Rendered
 
 
-.. _Latest Package for Python 2.6: https://github.com/downloads/jcurry/ZenPacks.skills1st.snmpExtend/ZenPacks.skills1st.snmpExtend-1.0.0-py2.6.egg
-.. _Latest Package for Python 2.7: https://github.com/downloads/jcurry/ZenPacks.skills1st.snmpExtend/ZenPacks.skills1st.snmpExtend-1.0.0-py2.7.egg
+.. _Latest Package for Python 2.6: https://github.com/downloads/jcurry/ZenPacks.skills1st.snmpExtend/ZenPacks.skills1st.snmpExtend-1.1.0-py2.6.egg
+.. _Latest Package for Python 2.7: https://github.com/downloads/jcurry/ZenPacks.skills1st.snmpExtend/ZenPacks.skills1st.snmpExtend-1.1.0-py2.7.egg
 
 
 .. |snmp_extend_output1| image:: http://github.com/jcurry/ZenPacks.skills1st.snmpExtend/raw/master/screenshots/snmp_extend_output1_screenshot.jpg
