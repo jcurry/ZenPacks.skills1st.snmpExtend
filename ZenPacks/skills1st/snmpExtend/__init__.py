@@ -22,12 +22,24 @@ class ZenPack(ZenPackBase):
     """ ZenPack loader
 """
     def install(self, app):
+        if hasattr(self.dmd.Reports, 'Device Reports'):
+            devReports = self.dmd.Reports['Device Reports']
+            rClass = devReports.getReportClass()
+            if not hasattr(devReports, 'Snmp Reports'):
+                dc = rClass('Snmp Reports', None)
+                devReports._setObject('Snmp Reports', dc)
         self.dmd.Events.createOrganizer("/Change/Set/Status")
         ZenPackBase.install(self, app)
         for d in self.dmd.Devices.getSubDevices():
             d.os.buildRelations()
 
     def upgrade(self, app):
+        if hasattr(self.dmd.Reports, 'Device Reports'):
+            devReports = self.dmd.Reports['Device Reports']
+            rClass = devReports.getReportClass()
+            if not hasattr(devReports, 'Snmp Reports'):
+                dc = rClass('Snmp Reports', None)
+                devReports._setObject('Snmp Reports', dc)
         self.dmd.Events.createOrganizer("/Change/Set/Status")
         ZenPackBase.upgrade(self, app)
         for d in self.dmd.Devices.getSubDevices():
@@ -35,6 +47,10 @@ class ZenPack(ZenPackBase):
 
     def remove(self, app, junk):
         ZenPackBase.remove(self, app, junk)
+        if hasattr(self.dmd.Reports, 'Device Reports'):
+            devReports = self.dmd.Reports['Device Reports']
+            if hasattr(devReports, 'Snmp Reports'):
+                devReports._delObject('Snmp Reports')
         OperatingSystem._relations = tuple([x for x in OperatingSystem._relations if x[0] not in ['snmpCommand']])
         for d in self.dmd.Devices.getSubDevices():
             d.os.buildRelations()

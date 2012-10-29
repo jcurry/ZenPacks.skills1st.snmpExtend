@@ -31,6 +31,8 @@ be modified are under the resources directory and the modeler/plugins directory:
     * modeler/plugins/snmpCommandMap.py.output1    )  one of these should be copied to snmpCommandMap.py
     * modeler/plugins/snmpCommandMap.py.output2    )
 
+The 1.1.0 version adds a report under Device Reports -> Snmp Reports -> Snmp Command
+
 Components
 ==========
 
@@ -91,6 +93,8 @@ Change History
 ==============
 * 1.0.0
    * Initial Release
+* 1.1.0
+   * Added report under Device Reports -> Snmp Reports -> Snmp Commands
 
 Screenshots
 ===========
